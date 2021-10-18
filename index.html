@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19127640 - Hoàng Hữu Giáp</title>
+</head>
+<body>
+    <div id="login_form" style="text-align: center;">
+        <form action="">
+            <h1>Login Form</h1>
+            <div>
+                <!-- Usernam -->
+                <input id='username'type="text" placeholder="Input username" required>
+            </div>
+           <div>
+               <!-- Password -->
+                <input id='password' type="password" placeholder="Input password" required>
+           </div>
+            <!-- Nút login -->
+            <button id='login_button' type="button">
+                Log in
+            </button>
+        </form>
+    </div>
+    <div id="content_section" style="display: none">
+        <h1>Mọi thứ bắt đầu ở đây</h1>
+        
+
+
+
+
+
+
+        <!-- Nút logout -->
+        <button id='logout_button' type="button">
+            Log out
+        </button>
+    </div>
+
+    <script>
+        let loginButton = document.getElementById('login_button')
+        let logoutButton = document.getElementById('logout_button')
+        let loginForm = document.getElementById('login_form')
+        let contentSection = document.getElementById('content_section')
+        let username = document.getElementById('username')
+        let password = document.getElementById('password')
+        loginButton.onclick=function(){
+            if(username.value === 'admin' && password.value === 'admin'){
+                alert('Đăng nhập thành công.')
+                loginForm.style.display = 'none'
+                contentSection.style.display = 'inline-block'
+            }else{
+                alert('Sai tài khoản hoặc mật khẩu.')
+            }
+        }
+        logoutButton.onclick=function(){
+            loginForm.style.display = 'block'
+            contentSection.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
