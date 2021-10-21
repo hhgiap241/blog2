@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>19127640 - Hoàng Hữu Giáp</title>
+    <title>Blog02_HTML</title>
 </head>
 <body>
     <div id="login_form" style="text-align: center;">
         <form action="">
             <h1>Login Form</h1>
             <div>
-                <!-- Usernam -->
+                <!-- Username -->
                 <input id='username'type="text" placeholder="Input username" required>
             </div>
            <div>
@@ -24,15 +24,222 @@
             </button>
         </form>
     </div>
+    
     <div id="content_section" style="display: none">
-        <h1>Mọi thứ bắt đầu ở đây</h1>
-        
+        <h1 id="section0">HTML cơ bản</h1>
+        <h2 id="top">Links to Sections of The Same Page</h2>
+        <ul>
+            <li><a href="#section1">Mục tiêu bài viết</a></li>
+            <li><a href="#section2">Cài đặt môi trường</a></li>
+            <li><a href="#section3">Các khái niệm cơ bản</a>
+                <ul>
+                    <li><a href="#section3.1">HTML là gì?</a></li>
+                    <li><a href="#section3.2">Lịch sử hình thành HTML</a></li>
+                    <li><a href="#section3.3">HTML hoạt động như thế nào?</a></li>
+                    <li><a href="#section3.4">Ưu và nhược điểm của HTML</a></li>
+                    <li><a href="#section3.5">Các thuật ngữ phổ biến trong HTML</a></li>
+                </ul>
+            </li>
+            <li><a href="#section4">Cấu trúc của một website</a></li>
+            <li><a href="#section5">Hướng dẫn tạo một website và đưa lên internet với GitHub</a>
+                <ul>
+                    <li><a href="#section5.1">Một số thẻ cần biết trong HTML</a></li>
+                    <li><a href="#section5.2">Các phần mềm cần chuẩn bị</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+        <h2 id="section1">1. Mục tiêu bài viết</h2>
+        <div>
+            <p>Đối với những người mới bắt đầu lập trình web thì HTML là một ngôn ngữ mà chúng ta cần phải biết. Sau khi đọc bài blog này, các bạn có thể:</p>
+            <ul>
+                <li>Hiểu rõ hơn về HTML (khái niệm, lịch sử, điểm mạnh|yếu,...), cấu trúc cũng như các thành phần cơ bản của một website.</li>
+                <li>Có thể tự tạo ra được một website với HTML và đưa lên internet cho mọi người cùng truy cập.</li>
+            </ul>
+        </div>
+        <h2 id="section2">2. Cài đặt môi trường</h2>
+        <div>
+            <h3>&nbsp;&nbsp;&nbsp;1. Lựa chọn IDE phù hợp</h3>
+            <div>
+                <p>- Theo trang <a href="https://tms-outsource.com/blog/posts/web-development-ide/" target="_blank">tms-outsource.com</a>&nbsp;thì hiện nay một số IDE dùng để code HTML, CSS cũng như JavaScript tốt nhất đó chính là:</p>
+                <ol>
+                    <li>Visual Studio Code</li>
+                    <li>RJ TextEd</li>
+                    <li>Light Table</li>
+                    <li>Sublime Text</li>
+                    <li>...</li>
+                </ol>
+                <p>- Trong phạm vi bài blog này và sau này mình sẽ code trên Visual Studio Code vì nó rất quen thuộc với mỗi người chúng ta.</p>
+            </div>
+            <h3>&nbsp;&nbsp;&nbsp;2. Lựa chọn trình duyệt web</h3>
+            <div>
+                <span>- Khi tạo ra một trang web thì không có một trình duyệt cố định nào để lập trình viên có thể dựa trên đó để làm việc. Bởi lẽ khi người dùng duyệt web, mỗi người dùng sẽ sử dụng một hoặc nhiều trình duyệt web khác nhau.</span>
+                <span>Do đó, khi làm chúng ta cần kiểm tra cẩn thận trên nhiều trình duyệt nhất có thể nhằm tránh những lỗi không mong muốn.</span>    
+                <span>Theo trang <a href="https://www.oberlo.com/statistics/browser-market-share" target="_blank">oberlo.com</a> thì &gt;&gt;Google&nbsp;Chrome&lt;&lt; chính là trình duyệt phổ biến nhất trong năm 2021.</span>
+                <img src="https://www.oberlo.com/media/1625336230-most-popular-browsers-in-2021.png?fit=max&fm=webp&w=1800" alt="most-popular-browsers-in-2021" style="display: block; margin-left: auto; margin-right: auto;width: 70%;">
+            </div>
+        </div>
+        <h2 id="section3">3. Các khái niệm cơ bản</h2>
+        <!-- Nên dưa cả phần lịch sử vào đây -->
+        <div>
+            <h3 id="section3.1">&nbsp;&nbsp;&nbsp;1. HTML là gì?</h3>
+            <div>
+                <ul>
+                    <li>HTML viết tắt của HyperText Markup Language là ngôn ngữ đánh dấu siêu văn bản dùng để xây dựng cấu trúc của một website. Được tạo ra bởi Tim Berners-Lee ông cũng là người khai sinh ra World Wide Web (www) và cũng là chủ tịch của World Wide Web Consortium (<a href="https://www.w3.org/" target="_blank">W3C</a> – tổ chức tiêu chuẩn chính cho World Wide Web được thành lập vào 1 tháng 10 năm 1994).</li>
+                    <li>Siêu văn bản (Hypertext) là phương thức mà người dùng Internet sử dụng để điều hướng trang web. Bằng cách click vào văn bản đặc biệt gọi là siêu liên kết (hyperlink), người dùng sẽ được đưa đến các trang mới. Việc sử dụng thuật ngữ "hyper" có nghĩa là không tuyến tính, vì vậy người dùng có thể truy cập bất cứ nơi nào trên Internet chỉ bằng cách click chuột vào các liên kết có sẵn. </li>
+                    <li>Đánh dấu (markup) chính là phương thức mà HTML đánh dấu cho những đoạn văn bản, nói cách khác, HTML đánh dấu chúng là một loại văn bản cụ thể.</li>
+                    <li>Nói một cách đơn giản thì HTML chính là một tập hợp các kí hiệu hoặc mã đánh dấu được chèn vào một siêu văn bản nhằm giúp trình duyệt web biết được cách làm sao để hiển thị cho đúng với cấu trúc được quy định trước đó bởi HTML.</li>
+                    <li>Lưu ý: HTML không phải là ngôn ngữ lập trình, có nghĩa là nó không có khả năng tạo chức năng động. Thay vào đó, nó cho phép tổ chức và định dạng các tài liệu, tương tự như Microsoft Word.</li>
+                </ul>
+            </div>
+            <h3 id="section3.2">&nbsp;&nbsp;&nbsp;2. Lịch sử hình thành HTML</h3>
+            <div>
+                <ul>
+                    <li>Phiên bản sơ khai đầu tiên của HTML được phát hành vào năm 1991 bao gồm 18 tags HTML. </li>
+                    <img src="https://i0.wp.com/s1.uphinh.org/2021/10/20/img.png" alt="history of HTML" style="display: block; margin-left: auto; margin-right: auto;width: 50%;">
+                    <li>Theo Mozilla Developer Network, HTML hiện có hơn 140 tags, trong đó nhiều tags mới được bổ sung và cải tiến, một số tag bị tạm ngưng và không còn được các trình duyệt hỗ trợ.</li>
+                    <li>Chúng ta cần quan tâm tới lịch sử của HTML là bởi vì hiện nay, có tới 2 tổ chức quy định danh sách những thẻ HTML đó chính là: <a href="https://www.w3.org/" target="_blank">W3C</a> (HTML5 - quy định tất cả những thẻ cơ bản mà mọi trình duyệt đều hỗ trợ) 
+                        và <a href="https://whatwg.org/" target="_blank">WHATWG</a> (quy định những thẻ được định dạng thêm mà HTML5 chưa có và được cập nhật mỗi ngày). Do đó, khi làm web chúng ta nên chọn những thẻ được quy định bởi W3C, chỉ khi nào cần tới những chức năng đặc thù nào đó 
+                        thì khi đó ta có thể tham khảo thêm các thẻ của WHATWG. Tuy nhiên cần xem xét kỹ việc sử dụng các thẻ của WHATWG có ảnh hưởng tới các trình duyệt khác hay không.</li>
+                </ul>
+            </div>
+            <h3 id="section3.3">&nbsp;&nbsp;&nbsp;3. HTML hoạt động như thế nào?</h3>
+            <div>
+                <ul>
+                    <li>Khi bạn gõ ra 1 tên miền, trình duyệt mà bạn đang sử dụng (chẳng hạn như Chrome) sẽ kết nối tới 1 máy chủ web, bằng cách dùng 1 địa chỉ IP, vốn được thấy bằng cách phân giải tên miền đó (DNS). Máy chủ web chính là 1 máy tính được kết nối tới internet và nhận các yêu cầu tới trang web từ trình duyệt của bạn. Máy chủ sau đó sẽ gửi trả thông tin về trình duyệt của bạn, là 1 tài liệu HTML, để hiển thị trang web!</li>
+                    <li>Thay vì sử dụng ngôn ngữ lập trình để thực hiện các chức năng, HTML sử dụng các thẻ để xác định các loại nội dung khác nhau và mục đích phục vụ cho trang web.</li>
+                    <li>Một tập tin HTML sẽ bao gồm các phần tử HTML và được lưu lại dưới đuôi mở rộng là .html hoặc .htm. Khi một tập tin HTML được hình thành, việc xử lý nó sẽ do trình duyệt web đảm nhận. Trình duyệt sẽ đóng vai trò đọc hiểu nội dung HTML từ các thẻ bên trong và sẽ chuyển sang dạng văn bản đã được đánh dấu để đọc, nghe hoặc hiểu.</li>
+                    <li>Chúng ta có thể xem các file .html (.htm) bằng cách sử dụng bất kỳ trình duyệt web nào như Google Chrome, Safari, Mozilla Firefox, hay Opera.</li>
+                </ul>
+            </div>
+            <h3 id="section3.4">&nbsp;&nbsp;&nbsp;4. Ưu và nhược điểm của HTML</h3>
+            <div>
+                <ul>Ưu điểm:
+                    <li>Có nhiều tài nguyên hỗ trợ với cộng đồng người dùng vô cùng lớn</li>
+                    <li>Có thể hoạt động mượt mà trên hầu hết mọi trình duyệt hiện nay</li>
+                    <li>Dễ dàng để tích hợp với các loại ngôn ngữ backend (ví dụ như: PHP, Node.js,…)</li>
+                    <li>Markup gọn gàng và đồng nhất. Con người đọc cũng dễ dàng hiểu được.</li>
+                </ul>
+                <ul>Nhược điểm:
+                    <li>Được dùng chủ yếu cho web tĩnh. Đối với các tính năng động như update hay realtime thời gian thực, bạn cần sử dụng JavaScript hoặc ngôn ngữ backend bên thứ 3 như PHP.</li>
+                    <li>Một vài trình duyệt còn chậm cập nhật để hỗ trợ tính năng mới của HTML</li>
+                </ul>
+            </div>
+            <h3 id="section3.5">&nbsp;&nbsp;&nbsp;5. Các thuật ngữ phổ biến trong HTML</h3>
+            <div>
+                <ul>
+                    <li>HTML document:HTML document hay tài liệu HTML là một tập tin có đuôi mở rộng dạng .htm hoặc .html và được tạo nên từ nhiều phần tử HTML. 
+                        Mỗi một HTML document hoàn chỉnh sẽ đại diện cho một web page và cần tuân thủ theo một cấu trúc nhất định. Dưới đây là một HTML document hoàn chỉnh.
+                    </li>
+                    <img src="https://i0.wp.com/s1.uphinh.org/2021/10/20/img_1.png" alt="HTML document hoàn chỉnh" style="display: block; margin-left: auto; margin-right: auto;width: 40%;">
+                    <li>HTML tag hay thẻ HTML thường có cấu trúc dạng: &lt;tagname&gt;…&lt;/tagname&gt;. Mỗi thẻ HTML có nhiệm vụ đánh dấu cho một loại phần tử nhất định trên trang web. Trong đó:
+                        <ul>
+                            <li>Thẻ HTML dạng &lt;tagname&gt; (không có ký tự /) được gọi là thẻ mở, là thẻ được sử dụng để bắt đầu việc đánh dấu một phần tử nào đó.</li>
+                            <li>Thẻ HTML dạng &lt;/tagname&gt; (có chứa ký tự /) được gọi là thẻ đóng, là thẻ dùng dể đánh dấu kết thúc cho một phần tử nào đó.</li>
+                            <li>Tuy nhiên, một số thẻ HTML chỉ có thẻ mở mà không có thẻ đóng, chẳng hạn thẻ &lt;br&gt;, &lt;hr&gt; hay &lt;img&gt;...</li>
+                        </ul>
+                    </li>
+                    <li>HTML attribute hay thuộc tính HTML là những tùy chỉnh đối với các thẻ trong HTML và chúng luôn nằm trong các thẻ mở, có dạng như sau:
+                        <h4>&lt;tagname attribute1="…" attribute2="…"&gt;….&lt;/tagname&gt;</h4>
+                        Ví dụ đối với thẻ img: &lt;img src="" alt=""&gt;: Trong đó: attribute src có nghĩa là source của bức hình mà ta muốn đưa lên trang web, còn alt sẽ chỉ định văn bản thay thế cho hình ảnh, nếu hình ảnh vì lý do nào đó không thể hiển thị được.
+                        Lưu ý: Một số attribute có thể được sử dụng cho nhiều thẻ khác nhau, nhưng cũng có những attribute chỉ dành cho một số thẻ nhất định. Một số thẻ bắt buộc phải có attribute nào đó, ngược lại, một số thẻ có thể có hoặc không có những attribute này.
+                    </li>
+                    <li>HTML element hay phần tử HTML là tất cả những gì bắt đầu từ thẻ mở cho đến thẻ đóng. Ví dụ:
+                        &lt;span&gt;Hello HTML&lt;/span&gt; thì được gọi là một HTML element.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h2 id="section4">4. Cấu trúc của một website</h2>
+        <div>
+            <p>Mỗi trang web đều có cách thể hiện cấu trúc khác nhau, có trang 1 cột, có trang 2 và cũng có trang chứa nhiều cột, bên dưới đây chúng ta tham khảo một trang đơn giản sử dụng 2 cột để layout.</p>
+            <ul>
+                <li>Phần đầu: header, có thể chứa logo, câu slogan, các button, đoạn flash, hoặc nút search...</li>
+                <li>Phần liên kết toàn cục: global navigation, dùng để chứa các liên kết đến những trang quan trọng trong toàn bộ trang, trong phần này có thể chứa thêm các liên kết con (sub navigation).</li>
+                <li>Phần thân của trang: page body, phần này chứa phần nội dung chính (content) và phần nội dung phụ (sidebar).
+                    <ul>
+                        <li>Phần nội dung chính: content, phần này chứa nội dung chính cần thể hiện cho người dùng xem.</li>
+                        <li>Phần nội dung phụ: sidebar, phần này có thể chứa liên kết phụ của từng trang (local navigation), hoặc các banner chứa liên kết liên quan, hoặc có thể dùng để chứa các liên kết quảng cáo,...</li>
+                    </ul>
+                </li>
 
-
-
-
-
-
+                <li>Phần cuối trang web: footer, phần này thường chứa phần liên hệ như: tên công ty, địa chỉ, số điện thoại, mail liên hệ,... và đặc biệt là copyright, hoặc có thể chứa các liên kết toàn trang, các banner liên kết,...</li>
+                
+            </ul>
+        </div>
+        <h2 id="section5">5. Hướng dẫn tạo một website và đưa lên internet với GitHub</h2>
+        <div>
+            <h3 id="section5.1">&nbsp;&nbsp;&nbsp;1. Một số thẻ cần biết trong HTML</h3>
+            <table>
+                <tr>
+                    <th scope="row">Tên thẻ</th>
+                    <th scope="row">Chức năng</th>
+                </tr>
+                <tr>
+                    <td>&lt;!DOCTYPE&gt;</td>
+                    <td>Đây là thẻ có nhiệm vụ khai báo cho trình duyệt web biết rằng tài liệu đang hiển thị là HTML. Mọi tài liệu HTML đều phải bắt đầu với &lt;!DOCTYPE&gt;. </td>
+                </tr>
+                <tr>
+                    <td>&lt;html&gt;</td>
+                    <td>Thẻ này tượng trưng cho thư mục gốc của một tài liệu HTML, đóng vai trò là khu vực chứa tất cả các phần tử HTML khác (trừ &lt;!DOCTYPE&gt;). Nó luôn phải có thuộc tính &quot;lang&quot; để khai báo ngôn ngữ cho một phần hoặc cả trang web, giúp công cụ tìm kiếm và trình duyệt dễ dàng đọc và hiển thị được thông tin trong trang.</td>
+                </tr>
+                <tr>
+                    <td>&lt;head&gt;</td>
+                    <td>Nằm giữa &lt;html&gt; và &lt;body&gt;, thẻ &lt;head&gt; làm nhiệm vụ chứa các siêu dữ liệu. Đây là những dữ liệu về tài liệu HTML, dùng để xác định tiêu đề, ký tự và các thông tin meta khác. 
+                        Một số thẻ có thể lồng vào thẻ &lt;head&gt; như: &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;...
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;title&gt;</td>
+                    <td>Thẻ này chỉ ra tiêu đề của trang HTML, xuất hiện dưới dạng văn bản và được hiển thị ở thanh tiêu đề của trình duyệt hoặc ở tab của trang. Đồng thời, nó cũng xác định tiêu đề cho trang khi trang được thêm vào mục yêu thích. 
+                        Đây là một phần tử bắt buộc phải có trong mọi tài liệu HTML. 
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;body&gt;</td>
+                    <td>Đây là thẻ xác định phần nội dung của tài liệu. Nó là vùng chứa cho tất cả các nội dung có thể nhìn thấy được như tiêu đề, đoạn văn, hình ảnh, siêu liên kết, bảng biểu, danh mục,…</td>
+                </tr>
+                <tr>
+                    <td>&lt;h1&gt; - &lt;h6&gt;</td>
+                    <td>Được sử dụng để chỉ rõ các tiêu đề trong tài liệu HTML. Mức độ quan trọng của tiêu đề giảm dần từ &lt;h1&gt; xuống &lt;h6&gt;. Mỗi trang chỉ dùng 1 &lt;h1&gt;. </td>
+                </tr>
+                <tr>
+                    <td>&lt;p&gt;</td>
+                    <td>Thẻ dùng để xác định một đoạn văn. Các trình duyệt sẽ tự động thêm một dòng trống trước và sau mỗi thẻ &lt;p&gt;.</td>
+                </tr>
+                <tr>
+                    <td>&lt;br&gt;</td>
+                    <td>Bạn sẽ cần đến thẻ này để tạo một dấu ngắt dòng giữa văn bản. Đây là một thẻ rỗng, không có thẻ đóng.</td>
+                </tr>
+                <tr>
+                    <td>&lt;div&gt;</td>
+                    <td>Được dùng để nhóm các phần tử hay các thẻ lại với nhau trong các khu vực của website và tạo thành một khối. Kết thúc khối đó sẽ tự động xuống dòng.</td>
+                </tr>
+                <tr>
+                    <td>&lt;span&gt;</td>
+                    <td>Định nghĩa một phần trong một tài liệu. Có thể chứa nhiều thẻ span khác và chúng được in trên cùng một dòng, chứ không xuống dòng như thẻ &lt;div&gt;.</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ngoài ra còn rất nhiều loại thẻ khác, chúng ta có thể xem thêm <a href="https://www.w3schools.com/TAGS/default.ASP", target="_blank">tại đây.</a></td>
+                </tr>
+            </table>
+            <h3 id="section5.2">&nbsp;&nbsp;&nbsp;2. Các phần mềm cần chuẩn bị</h3>
+            <ol>
+                <li>Trình duyệt Google Chrome</li>
+                <li>Tài khoản GitHub</li>
+                <li>Visual Studio Code</li>
+                <li><a href="https://git-scm.com/downloads" target="_blank">Git Bash</a></li>
+            </ol>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bNc71mOqPgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Tham khảo</h3>
+            <ul>
+                <li><a href="https://hocwebchuan.com/tutorial/tut_html_basic.php" target="_blank">hocwebchuan.com</a></li>
+                <li><a href="https://timoday.edu.vn/tong-hop-cac-the-trong-html/" target="_blank">timoday.edu.vn</a></li>
+                <li><a href="https://wiki.matbao.net/html-la-gi-nen-tang-lap-trinh-web-cho-nguoi-moi-bat-dau/" target="_blank">wiki.matbao.net</a></li>
+                <li><a href="https://topdev.vn/blog/html-la-gi/#html-hoat-dong-ra-sao" target="_blank">topdev.vn</a></li>
+            </ul>
+            <a href="#section0">Back to top</a>
+        </div>
         <!-- Nút logout -->
         <button id='logout_button' type="button">
             Log out
